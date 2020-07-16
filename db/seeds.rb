@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+safeway = Market.create(name: "Safeway")
+albertsons = Market.create(name: "Albertsons")
+wholefoods = Market.create(name: "Whole Foods")
+winco = Market.create(name: "Winco")
+
+mondays_list = Grocery.create(grocery_item: "Salt", qty: 2, notes: "Coarse", market_id: 1)
