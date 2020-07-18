@@ -1,8 +1,8 @@
 class Api::V1::GroceriesController < ApplicationController
 
     def index
-        @groceries = Grocery.all
-        render json: @groceries
+        groceries = Grocery.all
+        render json: GrocerySerializer.new(groceries)
     end
 
     def create
