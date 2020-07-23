@@ -1,4 +1,4 @@
 class MarketSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :grocery
+  attributes :name
 end
