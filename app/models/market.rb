@@ -1,6 +1,6 @@
 class Market < ApplicationRecord
 
-    has_many :groceries, dependent: :destroy
+    has_many :groceries
 
 end
 
