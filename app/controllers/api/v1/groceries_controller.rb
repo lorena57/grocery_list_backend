@@ -15,6 +15,12 @@ class Api::V1::GroceriesController < ApplicationController
         end
     end
 
+    def update
+        grocery = Grocery.find(params[:id])
+        grocery.update(grocery_params))
+        render json: grocery, status: 200    
+    end
+
     def show
         grocery = Grocery.find_by(id: params[:id])
         if grocery 
