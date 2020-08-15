@@ -1,4 +1,6 @@
 class GrocerySerializer
   include FastJsonapi::ObjectSerializer
-  attributes :grocery_item, :notes, :market
+  attributes :id, :grocery_item, :notes, :qty
+
+  belongs_to :market
 end
