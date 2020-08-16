@@ -7,16 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-safeway = Market.create(name: "Safeway")
-albertsons = Market.create(name: "Albertsons")
-wholefoods = Market.create(name: "Whole Foods")
-winco = Market.create(name: "Winco")
+# safeway = Market.create(name: "Safeway")
+# albertsons = Market.create(name: "Albertsons")
+# wholefoods = Market.create(name: "Whole Foods")
+# winco = Market.create(name: "Winco")
 
-mondays_list = Grocery.create(grocery_item: "Salt", qty: 2, notes: "Coarse", market_id: 1)
+# mondays_list = Grocery.create(grocery_item: "Salt", qty: 2, notes: "Coarse", market_id: 1)
 
-10.times do 
-  Grocery.create({grocery_item: Faker::Food.vegetables, qty: Faker::Number.between(from: 1, to: 10), notes: Faker::Food.description, market_id: 3})
-end
+# 10.times do 
+#   Grocery.create({grocery_item: Faker::Food.vegetables, qty: Faker::Number.between(from: 1, to: 10), notes: Faker::Food.description, market_id: 3})
+# end
 
 # 10.times do 
 #   Appointment.create({appointment_time: "October 15, 2020 10:48 AM", student_id: 1, tutor_id: 1})
