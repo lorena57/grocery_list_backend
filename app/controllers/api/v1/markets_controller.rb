@@ -19,7 +19,7 @@ end
 
 
     def show
-        market = Market.find_by(:id =>[:id])
+        market = Market.find_by(:id =>params[:id])
         render json: market
     end
 
