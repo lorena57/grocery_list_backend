@@ -7,7 +7,7 @@ class Api::V1::GroceriesController < ApplicationController
     end
 
     def create
-        grocery = Grocery.new(grocery_params)
+        grocery = Grocery.create(grocery_params)
         grocery.save!
         render json: grocery
         
