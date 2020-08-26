@@ -7,14 +7,10 @@ Rails.application.routes.draw do
       # resources :markets, only: [:index]
 
       resources :groceries
-      # resources :markets
-    end
-  end
-
-  namespace :api do
-    namespace :v1 do
       resources :markets
     end
   end
+
+
 
 end
