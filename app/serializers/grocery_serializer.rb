@@ -3,5 +3,5 @@ class GrocerySerializer
   
   attributes :grocery_item, :qty, :notes, :market_id, :market
 
-  belongs_to :market
+  # belongs_to :market
 end
