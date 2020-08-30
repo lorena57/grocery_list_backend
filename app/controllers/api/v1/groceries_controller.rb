@@ -5,8 +5,8 @@ class Api::V1::GroceriesController < ApplicationController
         render json: GrocerySerializer.new(groceries)
     end
 
-    def create
-        grocery = Grocery.find_by(id: grocery_params['market_id'])
+      def create
+        market = Market.find_by(id: grocery_params['market_id'])
         grocery = Grocery.new(grocery_params)
         grocery.market = market
         if grocery.save
@@ -25,6 +25,12 @@ class Api::V1::GroceriesController < ApplicationController
         end
     end
 
+    def update
+        grocery = Grocery.find_by(id: params[:id])
+        grocery.update(grocery_params)
+        render json: grocery, status: 200
+    end
+
     def destroy
         grocery = Grocery.find_by(id: params[:id])
         grocery.delete
@@ -34,7 +40,7 @@ class Api::V1::GroceriesController < ApplicationController
     private
 
     def grocery_params
-        params.require(:grocery).permit(:grocery_item, :qty, :notes) 
+        params.require(:grocery).permit(:grocery_item, :qty, :notes, :market_id) 
     end
 
 end
