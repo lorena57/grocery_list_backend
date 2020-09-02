@@ -9,7 +9,7 @@ class Api::V1::GroceriesController < ApplicationController
         market = Market.find_by(id: grocery_params['market_id'])
         grocery = Grocery.new(grocery_params)
         grocery.market = market
-        if grocery.save
+        if grocery.save!
             render json: GrocerySerializer.new(grocery), status: :accepted
         else
             render json: {errors: grocery.errors.full_messages}
@@ -40,7 +40,7 @@ class Api::V1::GroceriesController < ApplicationController
     private
 
     def grocery_params
-        params.require(:grocery).permit(:grocery_item, :qty, :notes, :market_id) 
+        params.require(:grocery).permit(:market_id, :groceryItem, :qty, :notes) 
     end
 
 end
